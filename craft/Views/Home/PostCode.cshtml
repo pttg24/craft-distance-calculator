@@ -1,0 +1,75 @@
+﻿@{
+    ViewData["Title"] = "Search results";
+}
+
+@{
+    var data = ViewBag.Message;
+}
+
+<div class="row">
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">PostCode</th>
+            <th scope="col">CCG</th>
+            <th scope="col">Nuts</th>
+            <th scope="col">Admin Ward</th>
+            <th scope="col">Region</th>
+            <th scope="col">Country</th>
+            <th scope="col">Dist. to Airport</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">@data.PostCode.Result.Postcode</th>
+            <td>@data.PostCode.Result.Ccg</td>
+            <td>@data.PostCode.Result.Nuts</td>
+            <td>@data.PostCode.Result.AdminWard</td>
+            <td>@data.PostCode.Result.Region</td>
+            <td>@data.PostCode.Result.Country</td>
+            <td>@data.Distance.Km.ToString("0.00") km / @data.Distance.Miles.ToString("0.00") miles</td>
+            <td>    
+                <form asp-controller="Home" asp-action="Index">
+                    <p>
+                        <input class="btn-success" type="submit" value="New Search" />
+                    </p>
+                </form>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="row">Historic</div>
+<div class="row">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">PostCode</th>
+                <th scope="col">CCG</th>
+                <th scope="col">Nuts</th>
+                <th scope="col">Admin Ward</th>
+                <th scope="col">Region</th>
+                <th scope="col">Country</th>
+                <th scope="col">Dist. to Airport</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in @data.Last3Records)
+            {
+                <tr>
+                    <th scope="row">@item.Postcode</th>
+                    <td>@item.Ccg</td>
+                    <td>@item.Nuts</td>
+                    <td>@item.AdminWard</td>
+                    <td>@item.Region</td>
+                    <td>@item.Country</td>
+                    <td>@item.Km.ToString("0.00") km / @item.Miles.ToString("0.00") miles</td>
+                    <td></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,22 @@
+version: '2.1'
+services: 
+  craft-api-mongo:
+    image: "mongo"
+    ports:
+      - "27017:27017"
+    volumes:
+      - /etc/craft-api-mongo/db:/data/db
+    networks:
+      - internal
+    restart: unless-stopped
+
+  craft-api:
+    image: craft-api
+    ports:
+      - 5000:80
+    networks:
+      - internal
+
+networks:
+  internal:
+    driver: bridge

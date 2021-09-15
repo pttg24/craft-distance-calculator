@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "craft", "craft\craft.csproj", "{51A6F27C-7977-4C09-A04E-42A0A16CCF72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "craft.Tests", "craft.Tests\craft.Tests.csproj", "{1190351E-9885-4DC1-9C3F-3CD708971675}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{51A6F27C-7977-4C09-A04E-42A0A16CCF72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51A6F27C-7977-4C09-A04E-42A0A16CCF72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51A6F27C-7977-4C09-A04E-42A0A16CCF72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51A6F27C-7977-4C09-A04E-42A0A16CCF72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1190351E-9885-4DC1-9C3F-3CD708971675}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1190351E-9885-4DC1-9C3F-3CD708971675}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1190351E-9885-4DC1-9C3F-3CD708971675}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1190351E-9885-4DC1-9C3F-3CD708971675}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7603BD43-55B7-4712-B938-6AC2CBE2999A}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h2 class="display-4">Welcome to PostCode Search Engine</h2>
+    <p>Insert PostCode in the textbox below. Click Go! to start your search.</p>
+</div>
+
+<div class="text-center">
+    <form asp-controller="Home" asp-action="PostCode">
+        <p>
+            PostCode: <input class="col-lg-8" type="text" name="SearchString" />
+            <input class="btn-primary" type="submit" value="Go!" />
+        </p>
+    </form>
+</div>
